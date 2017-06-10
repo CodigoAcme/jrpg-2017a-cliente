@@ -4,4 +4,4 @@ jdk:
   - openjdk7
 
 before_install:
-  - wget -P $TRAVIS_BUILD_DIR/ https://www.dropbox.com/s/hyuekqd3ev8sqcm/dominio.jar
+  - wget -P $TRAVIS_BUILD_DIR/ https://mega.nz/#!cFIhgLjb!1twdHFkATyzK42DQTBwr6x_SkIlHZyMlZwK73OFySM0
