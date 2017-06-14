@@ -20,6 +20,7 @@ import dominio.Personaje;
 import interfaz.EstadoDePersonaje;
 import interfaz.MenuBatalla;
 import interfaz.MenuInfoPersonaje;
+import inventario.Inventario;
 import juego.Juego;
 import mensajeria.Comando;
 import mensajeria.PaqueteAtacar;
@@ -206,15 +207,17 @@ public class EstadoBatalla extends Estado {
 			casta = new Asesino();
 		}
 
+		Inventario inventarioPersonaje = new Inventario();
+
 		if (paquetePersonaje.getRaza().equals("Humano")) {
 			personaje = new Humano(nombre, salud, energia, fuerza, destreza, inteligencia, casta, 
-				experiencia, nivel, id);
+				experiencia, nivel, id, inventarioPersonaje);
 		} else if (paquetePersonaje.getRaza().equals("Orco")) {
 			personaje = new Orco(nombre, salud, energia, fuerza, destreza, inteligencia, casta, 
-					experiencia, nivel, id);
+					experiencia, nivel, id, inventarioPersonaje);
 		} else if (paquetePersonaje.getRaza().equals("Elfo")) {
 			personaje = new Elfo(nombre, salud, energia, fuerza, destreza, inteligencia, casta,
-					experiencia, nivel, id);
+					experiencia, nivel, id, inventarioPersonaje);
 		}
 
 		nombre = paqueteEnemigo.getNombre();
@@ -235,16 +238,18 @@ public class EstadoBatalla extends Estado {
 		} else if (paqueteEnemigo.getCasta().equals("Asesino")) {
 			casta = new Asesino();
 		}
-
+		
+		Inventario inventarioEnemigo = new Inventario();
+		
 		if (paqueteEnemigo.getRaza().equals("Humano")) {
 			enemigo = new Humano(nombre, salud, energia, fuerza, destreza, inteligencia, casta,
-					experiencia, nivel, id);
+					experiencia, nivel, id, inventarioEnemigo);
 		} else if (paqueteEnemigo.getRaza().equals("Orco")) {
 			enemigo = new Orco(nombre, salud, energia, fuerza, destreza, inteligencia, casta,
-					experiencia, nivel, id);
+					experiencia, nivel, id, inventarioEnemigo);
 		} else if (paqueteEnemigo.getRaza().equals("Elfo")) {
 			enemigo = new Elfo(nombre, salud, energia, fuerza, destreza, inteligencia, casta,
-					experiencia, nivel, id);
+					experiencia, nivel, id, inventarioEnemigo);
 		}
 	}
 

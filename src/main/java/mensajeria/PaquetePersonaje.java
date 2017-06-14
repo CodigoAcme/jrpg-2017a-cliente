@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 
 import estados.Estado;
+import inventario.Inventario;
 
 public class PaquetePersonaje extends Paquete implements Serializable, Cloneable {
 
@@ -21,6 +22,8 @@ public class PaquetePersonaje extends Paquete implements Serializable, Cloneable
 	private int inteligencia;
 	private int nivel;
 	private int experiencia;
+	
+	private Inventario inventario;
 
 
 	public PaquetePersonaje() {
