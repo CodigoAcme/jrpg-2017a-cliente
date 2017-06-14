@@ -3,7 +3,7 @@ package mensajeria;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import dominio.Item;
+
 import estados.Estado;
 
 public class PaquetePersonaje extends Paquete implements Serializable, Cloneable {
@@ -21,7 +21,7 @@ public class PaquetePersonaje extends Paquete implements Serializable, Cloneable
 	private int inteligencia;
 	private int nivel;
 	private int experiencia;
-	private ArrayList<Item> inventario = new ArrayList<Item>();
+
 
 	public PaquetePersonaje() {
 		estado = Estado.estadoOffline;
